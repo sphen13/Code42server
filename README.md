@@ -13,7 +13,7 @@ docker run -d --name code42 \
   -v /private/var/docker/code42/db:/opt/proserver/db \
   -v /private/var/docker/code42/proserver:/var/opt/proserver \
   -v /private/var/docker/code42/log:/var/log/proserver \
-  code42
+  sphen/code42server
 ```
 
 ### Mapped Volumes

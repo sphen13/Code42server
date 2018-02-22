@@ -10,7 +10,8 @@ COPY run.sh /
 
 RUN cd /code42server && \
 	./install.sh -u --accept-eula && \
-  chmod +x /run.sh
+	chmod +x /run.sh && \
+	rm -rf /code42server
 
 EXPOSE 4280 4282 4285 4287
 
