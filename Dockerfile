@@ -1,14 +1,12 @@
 FROM mykro/java8-jre:latest
 
-RUN mkdir /code42server && \
-	cd / && \
-	wget -q https://download.code42.com/installs/proserver/6.5.2/Code42server_6.5.2_Linux.tgz && \
-	tar -xzf Code42server_6.5.2_Linux.tgz -C /code42server --strip-components=1 && \
-	rm -f /Code42server*
-
 COPY run.sh /
 
-RUN cd /code42server && \
+RUN mkdir /code42server && \
+	cd / && \
+	curl -qL https://download.code42.com/installs/proserver/6.5.2/Code42server_6.5.2_Linux.tgz | tar xvz -C /code42server --strip-components=1 && \
+	rm -f /Code42server* && \
+	cd /code42server && \
 	./install.sh -u --accept-eula && \
 	chmod +x /run.sh && \
 	rm -rf /code42server
