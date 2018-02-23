@@ -10,11 +10,18 @@ docker run -d --name code42 \
   -p 4282:4282 \
   -p 4285:4285 \
   -p 4287:4287 \
+  -e TIMEZONE=`America/New_York` \
   -v /private/var/docker/code42/db:/opt/proserver/db \
   -v /private/var/docker/code42/proserver:/var/opt/proserver \
   -v /private/var/docker/code42/log:/var/log/proserver \
   sphen/code42server
 ```
+
+### Environment Variables
+
+Variable | Description
+--- | ---
+TIMEZONE | Local Timezone [Reference](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
 ### Mapped Volumes
 

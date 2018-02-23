@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [[ ${TIMEZONE} ]]; then
+  # set timezone
+  rm /etc/localtime
+  echo ${TIMEZONE} > /etc/timezone
+  dpkg-reconfigure -f noninteractive tzdata
+fi
+
 # Start the proserver
 /opt/proserver/bin/proserver start
 status=$?
