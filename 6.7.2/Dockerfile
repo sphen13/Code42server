@@ -1,6 +1,16 @@
-FROM mykro/java8-jre:latest
+FROM ubuntu:xenial
 
 COPY run.sh /
+
+RUN apt-get update && \
+	apt-get install --no-install-recommends -y software-properties-common curl && \
+	add-apt-repository -y ppa:webupd8team/java && \
+	apt-get update && \
+	echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+	echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections && \
+	apt-get install -y oracle-java8-installer && \
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir /code42server && \
 	cd / && \
