@@ -4,7 +4,8 @@ What is this? Well... its a down and dirty docker container that provides Code42
 
 ### Tags
 
-- `7.0.4, latest`
+- `7.0.5, latest`
+- `7.0.4`
 - `7.0.3`
 - `7.0.2`
 - `7.0.0`
