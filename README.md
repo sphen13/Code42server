@@ -4,7 +4,9 @@ What is this? Well... its a down and dirty docker container that provides Code42
 
 ### Tags
 
-- `7.0.5, latest`
+- `8.2.5, latest`
+- `8.2.5-storage, storage`
+- `7.0.5`
 - `7.0.4`
 - `7.0.3`
 - `7.0.2`
@@ -24,7 +26,6 @@ What is this? Well... its a down and dirty docker container that provides Code42
 ```
 docker run -d --name code42 \
   -p 4280:4280 \
-  -p 4282:4282 \
   -p 4285:4285 \
   -p 4287:4287 \
   -e TIMEZONE='America/New_York' \
@@ -52,6 +53,6 @@ Path | Description
 
 You will need to map the follwing ports at the very least for full functionality:
 
-[4280, 4282, 4285, 4287][1]
+[4280, 4285, 4287][1]
 
 [1]: https://support.code42.com/Administrator/6/Planning_and_installing/Code42_platform_hardware_and_software_requirements#Inbound_ports
