@@ -4,8 +4,10 @@ What is this? Well... its a down and dirty docker container that provides Code42
 
 ### Tags
 
-- `8.2.5, latest`
-- `8.2.5-storage, storage`
+- `8.2.6, latest`
+- `8.2.6-storage, storage`
+- `8.2.5`
+- `8.2.5-storage`
 - `7.0.5`
 - `7.0.4`
 - `7.0.3`
